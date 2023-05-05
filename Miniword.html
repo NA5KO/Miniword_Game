@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Word</title>
+</head>
+<script>
+    function changecolor(){
+        var colorinput = document.getElementById("text-input").value;
+        document.getElementById("output").style.color = colorinput;
+    }
+function changesize(){
+    var fontsizeinput = document.getElementById("font-size-input").value;
+    document.getElementById("output").style.fontSize= fontsizeinput + "px";
+
+}
+function changefontfamily(){
+    var fontfamilyselect = document.getElementById("font-family-select").value;
+    document.getElementById("output").style.fontFamily=fontfamilyselect;
+}
+</script>
+<body>
+    <label for="text-input">Text:</label>
+    <textarea id="text-input" oninput="changecolor()"></textarea>
+
+    <label for="font-size-input">Font size:</label>
+    <input type="number" id="font-size-input" oninput="changesize()">
+
+    <label for="font-family-select">font family</label>
+    <select id="font-family-select" onselect="changefontfamily()"  >
+        <option value="Courier New"></option>
+        <option value="Arial"></option> 
+        <option value="Roman"></option>
+        <option value="Helvetica"></option>
+    </select>
+
+    <p id="output"> adqsdazdazojidqklsdazd^ù a azdazdqsdazd   </p>
+    
+</body>
+</html>
